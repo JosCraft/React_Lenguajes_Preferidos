@@ -1,0 +1,56 @@
+.section_1, .section_2, .section_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+
+  .section_1 {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .section_1 h1{
+    color: #FF4500;
+    font-size: 80px;
+  }
+
+  
+  .section_2 .Objetivos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .section_2 .objetivos-img {
+    max-width: 40%;
+    height: auto;
+  }
+  
+  .section_2 .objetivos-text {
+    max-width: 55%;
+    text-align: justify;
+    color: white; /* Si deseas que el texto sea blanco */
+  }
+  
+  .section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section_2 {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .section_3 {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+.container-xl  .my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }

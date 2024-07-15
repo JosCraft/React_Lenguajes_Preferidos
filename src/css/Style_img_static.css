@@ -1,0 +1,22 @@
+/*IMAGEN FIJA*/
+.imagenFondo{
+    background-color: rgb(29, 28, 28);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50em;
+}
+
+    
+
+
+.imagenFondo2 {
+    background-color: rgb(29, 28, 28); /* Ruta a la imagen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantener la imagen fija durante el scroll */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ajusta la altura para que cubra toda la vista */
+    overflow: auto; /* Permite el desplazamiento del contenido */
+  }
+  

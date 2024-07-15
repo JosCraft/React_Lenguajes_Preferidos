@@ -1,0 +1,53 @@
+.fondo_P .fondo-titulo {
+  color: #007bff; /* Blue */
+}
+
+.fondo_P .fondo-tipo {
+  color: #003d6b; /* Dark Blue */
+}
+
+.fondo_P .fondo-respuestas {
+  background-color: rgba(0, 123, 255, 0.2); /* Light Blue */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fondo_P .list-group-item {
+  background-color: rgba(0, 123, 255, 0.1); /* Light Blue background */
+  border: none;
+}
+
+.fondo_P .list-group-item:hover {
+  background-color: rgba(0, 123, 255, 0.3); /* Darker Blue on hover */
+  color: white;
+}
+
+.fondo_P .list-group-item-action {
+  color: #0056b3; /* Darker Blue */
+}
+
+.fondo_P strong {
+  color: #17a2b8; /* Teal */
+}
+
+.table-responsive {
+  margin-top: 20px;
+}
+
+.table thead th {
+  background-color: #17a2b8; /* Teal */
+  color: #ffffff; /* White */
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light Blue background */
+}
+
+.table-bordered {
+  border: 2px solid #007bff; /* Blue */
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.2); /* Light Blue on hover */
+}
