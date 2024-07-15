@@ -22,7 +22,11 @@ const Navi = () => {
             </li>            
             <li className='nav-item'>
               <Link className='nav-link' to='/preguntas'><span>Preguntas</span></Link>
-            </li>            
+            </li>    
+            <li className='nav-item'>
+              <Link className='nav-link' to='/infoPage '><span>Informacion</span></Link>
+            </li>           
+            
           </ul>
         </div>
       </div>

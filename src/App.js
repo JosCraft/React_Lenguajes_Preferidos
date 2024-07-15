@@ -11,7 +11,7 @@ function App() {
     <Base>
       {() => (
         <div className="">
-          <section className="imagenFondo section_1" style={{ backgroundImage: `url(${fondo_1})` }}>
+          <section className="section section_1">
             <div className='container-xl'>
               <h2>Lenguajes de Programación</h2>
               <p>Esta sección presenta los resultados de una encuesta realizada para conocer las preferencias de los desarrolladores en cuanto a lenguajes de programación. Los datos recopilados nos permiten entender cuáles lenguajes son más populares y por qué.</p>        
@@ -39,14 +39,7 @@ function App() {
             </div>
           </div>
         </div>
-        </section>
-          <h1>Selecciona una Pregunta</h1>
-          <Link to="/pregunta/15">
-            <button>Pregunta 15</button>
-          </Link>
-          <Link to="/pregunta/16">
-            <button>Pregunta 16</button>
-          </Link>
+        </section> 
         </div>
       )
       }

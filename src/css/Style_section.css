@@ -9,6 +9,7 @@
 
   .section_1 {
     background: rgba(0, 0, 0, 0.5);
+    height: 50vh;
   }
 
   .section_1 h1{
@@ -47,6 +48,7 @@
   }
   
   .section_3 {
+    padding: 25px;
     background: rgba(0, 0, 0, 0.5);
   }
 

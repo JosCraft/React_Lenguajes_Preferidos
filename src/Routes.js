@@ -5,7 +5,7 @@ import PreguntaPage from './views/pregunta/PreguntaPage';
 import PreguntaCualitativa from './views/pregunta/Cualitativa';
 import PageNotFound from './views/components/PageNotFound/PageNotFound';
 import PreguntaDatos from './views/pregunta/PreguntaDatos';
-
+import InfoPage from './views/info/InfoPage';
 
 const AppRoutes = () => {
   return (
@@ -13,6 +13,7 @@ const AppRoutes = () => {
         <Route path="/" element={<App />} />
         <Route path="/preguntas" element={<PreguntaPage />} />
         <Route path="/pregunta/:id" element={<PreguntaDatos />} />
+        <Route path="/infoPage" element={<InfoPage/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
   )
