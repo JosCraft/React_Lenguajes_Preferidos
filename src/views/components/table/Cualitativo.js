@@ -3,26 +3,26 @@ import { Table } from 'react-bootstrap';
 
 const CuantitativoDiscreto = ({ counts, frequencies, porcentual }) => {
   return (
-    <Table striped bordered hover responsive>
-      <thead>
-        <tr>
-          <th>Opción</th>
-          <th>Conteo</th>
-          <th>Frecuencia Relativa</th>
-          <th>Frecuencia Relativa (%)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.entries(counts).map(([option, count]) => (
-          <tr key={option}>
-            <td>{option}</td>
-            <td>{count}</td>
-            <td>{frequencies[option]}</td>
-            <td>{porcentual[option]}</td>
+    <div className="table-responsive mt-4">
+      <table className="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Clase</th>
+            <th>Frecuencia</th>
+            <th>Frecuencia Porcentual</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {Object.keys(counts).map((respuesta, index) => (
+            <tr key={index}>
+              <td>{respuesta}</td>
+              <td>{counts[respuesta]}</td>
+              <td>{porcentual[respuesta]}%</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
