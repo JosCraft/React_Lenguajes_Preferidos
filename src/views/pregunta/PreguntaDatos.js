@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import db_Pregunta_R from '../../data/db_Pregunta_R';
 import { fetchData, processData, calcularFrecuencia, calcularFrecuenciaPorcentual } from '../../services/dataService';
 import Discreta from './Discreta';
+import Cualitativa from './Cualitativa';
+import Continua from './Continua';
 import '../../css/Style_DatosP.css';
 
 const PreguntaDatos = () => {
@@ -49,9 +51,9 @@ const PreguntaDatos = () => {
         countValues.forEach(count => {
           acumuladaMenorSum += count;
           acumuladaMenorValues.push(acumuladaMenorSum);
-        });
+        });        
         setAcumuladaMenor(acumuladaMenorValues);
-
+        console.log("AcumuladaMenor:", acumuladaMenor);
         // Cálculo de acumulada mayor
         const acumuladaMayorValues = [];
         let acumuladaMayorSum = countValues[countValues.length - 1];
@@ -126,7 +128,29 @@ const PreguntaDatos = () => {
         ()=>(
           <div className="container mt-4">
         <h2>Datos de la Pregunta {id}</h2>
+        <Cualitativa
+          counts={counts}
+          frequencies={frequencies}
+          porcentual={porcentual}
+        />
         <Discreta
+          counts={counts}
+          acumuladaMenor={acumuladaMenor}
+          acumuladaMayor={acumuladaMayor}
+          porcentajeAcumuladaMenor={porcentajeAcumuladaMenor}
+          porcentajeAcumuladaMayor={porcentajeAcumuladaMayor}
+          frequencies={frequencies}
+          acumuladaRelativaMenor={acumuladaRelativaMenor}
+          acumuladaRelativaMayor={acumuladaRelativaMayor}
+          porcentajeAcumuladaRelativaMenor={porcentajeAcumuladaRelativaMenor}
+          porcentajeAcumuladaRelativaMayor={porcentajeAcumuladaRelativaMayor}
+          relativaMenor={relativaMenor}
+          relativaMayor={relativaMayor}
+          porcentajeMenor={porcentajeMenor}
+          porcentajeMayor={porcentajeMayor}
+          porcentual={porcentual}
+        />
+        <Continua
           counts={counts}
           acumuladaMenor={acumuladaMenor}
           acumuladaMayor={acumuladaMayor}

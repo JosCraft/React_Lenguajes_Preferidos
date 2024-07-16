@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import CuantitativoDiscreto from '../components/table/CuantitativoDiscreto';
 import BarChart from '../components/bar/BarChart';
 import HorizontalBarChart from '../components/bar/HorizontalBarChart';
+import LineChart from '../components/bar/LineChart';
+import PuntoEquilibrioChart from '../components/bar/PuntoEquilibrioChart ';
 
 const Discreta = ({
     counts, 
@@ -46,6 +48,9 @@ const Discreta = ({
       <BarChart counts={counts} questionId={id} />
       <BarChart counts={frequencies} questionId={id} />
       <HorizontalBarChart counts={porcentual} questionId={id} />
+      <LineChart counts={acumuladaMenor} questionId={id} />
+      <LineChart counts={acumuladaMayor} questionId={id} />      
+      <PuntoEquilibrioChart countsMenor={acumuladaMenor} countsMayor ={acumuladaMayor} questionId={id} />
     </div>
   );
 };
