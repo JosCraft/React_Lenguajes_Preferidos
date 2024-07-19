@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const LineChart = ({ counts, questionId }) => {
+const LineChart = ({ counts, questionId,name }) => {
   // Calculate total responses for the question
   const totalResponses = Object.values(counts).reduce((acc, count) => acc + count, 0);
 
@@ -56,7 +56,11 @@ const LineChart = ({ counts, questionId }) => {
       },
       title: {
         display: true,
-        text: `Conteo de Opciones en P${questionId}`,
+        text: `Ojiva de las Frecuencias ${name}`,
+        font: {
+          size: 25,
+          color: '#ffffff',  // Color blanco para el título
+        },
       },
     },
     scales: {
@@ -73,7 +77,11 @@ const LineChart = ({ counts, questionId }) => {
     },
   };
 
-  return <Line data={chartData} options={chartOptions} />;
+  return (
+    <div className="graph-container mt-5" style={{ height: '400px', width:'800px' }}>
+      <Line data={chartData} options={chartOptions} />
+    </div>
+    );
 };
 
 export default LineChart;

@@ -1,9 +1,9 @@
 /* Style_preguntas.css */
 
 .graph-container {
-    background-color: #f8f9fa;  /* Fondo gris claro */
+    background-color: rgba(253, 250, 250, 0.8);  /* Fondo gris claro */
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
     margin-top: 20px;
     max-width: 100%;
@@ -12,11 +12,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;  /* Alinea el contenido al centro */
+    color: white;
   }
   
   .graph-container h2 {
     font-size: 18px;
-    color: #333;
+    color: white;
     margin-bottom: 20px;
   }
   
@@ -25,3 +26,6 @@
     height: auto !important;
   }
   
+  .dobleEG{
+    background-color: rgba(253, 250, 250, 0.7);
+  }

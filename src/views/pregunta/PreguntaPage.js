@@ -43,7 +43,7 @@ const PreguntaPage = () => {
   return (
     <Base>
       {() => (
-        <div className="container my-5">
+        <div className="container-lg fondo_P">
           <h1>Preguntas de la Encuesta</h1>
           <div className="mb-4">
             <Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>

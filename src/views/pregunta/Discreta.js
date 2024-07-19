@@ -5,7 +5,7 @@ import BarChart from '../components/bar/BarChart';
 import HorizontalBarChart from '../components/bar/HorizontalBarChart';
 import LineChart from '../components/bar/LineChart';
 import PuntoEquilibrioChart from '../components/bar/PuntoEquilibrioChart ';
-
+import CalculosEstadisticos from './CalculosEstadisticos';
 const Discreta = ({
     counts, 
     acumuladaMenor, 
@@ -21,7 +21,7 @@ const Discreta = ({
     relativaMayor, 
     porcentajeMenor, 
     porcentajeMayor, 
-    porcentual 
+    porcentual ,
  }) => {
 
   const { id } = useParams();
@@ -45,11 +45,31 @@ const Discreta = ({
         porcentajeMayor={porcentajeMayor}
         porcentual={porcentual}
       />
-      <BarChart counts={counts} questionId={id} />
-      <BarChart counts={frequencies} questionId={id} />
+      <div className="mt-4">
+              <CalculosEstadisticos
+                counts={counts}
+                frequencies={frequencies}
+                porcentual={porcentual}
+                acumuladaMenor={acumuladaMenor}
+                acumuladaMayor={acumuladaMayor}
+                porcentajeAcumuladaMenor={porcentajeAcumuladaMenor}
+                porcentajeAcumuladaMayor={porcentajeAcumuladaMayor}
+                acumuladaRelativaMenor={acumuladaRelativaMenor}
+                acumuladaRelativaMayor={acumuladaRelativaMayor}
+                porcentajeAcumuladaRelativaMenor={porcentajeAcumuladaRelativaMenor}
+                porcentajeAcumuladaRelativaMayor={porcentajeAcumuladaRelativaMayor}
+                relativaMenor={relativaMenor}
+                relativaMayor={relativaMayor}
+                porcentajeMenor={porcentajeMenor}
+                porcentajeMayor={porcentajeMayor}
+                isQualitative={false}
+              />
+            </div>
+      <BarChart counts={counts} questionId={id} name='Absoluta'/>
+      <BarChart counts={frequencies} questionId={id} name='Relativa'/>
       <HorizontalBarChart counts={porcentual} questionId={id} />
-      <LineChart counts={acumuladaMenor} questionId={id} />
-      <LineChart counts={acumuladaMayor} questionId={id} />      
+      <LineChart counts={acumuladaMenor} questionId={id} name='Absolutas Acumuladas Menor Que '/>
+      <LineChart counts={acumuladaMayor} questionId={id} name='Absolutas Acumuladas Mayor Que '/>      
       <PuntoEquilibrioChart countsMenor={acumuladaMenor} countsMayor ={acumuladaMayor} questionId={id} />
     </div>
   );

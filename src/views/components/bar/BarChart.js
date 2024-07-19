@@ -1,16 +1,31 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import '../../../css/Style_grp.css'
+import '../../../css/Style_grp.css';
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const BarChart = ({ counts, questionId }) => {
+const BarChart = ({ counts, questionId, name }) => {
+  // Colores para las barras
+  const barColors = [
+    '#007bff',  // Azul
+    '#28a745',  // Verde
+    '#dc3545',  // Rojo
+    '#ffc107',  // Amarillo
+    '#6c757d',  // Gris
+    '#17a2b8',  // Cian
+    '#fd7e14',  // Naranja
+    '#6610f2',  // Violeta
+    '#e83e8c',  // Rosa
+    '#20c997',  // Verde menta
+  ];
+
   const data = {
     labels: Object.keys(counts),
     datasets: [{
       label: 'Frecuencia de Respuestas',
       data: Object.values(counts),
-      backgroundColor: '#007bff',  // Color del gráfico
+      backgroundColor: barColors.slice(0, Object.keys(counts).length),  // Usa los colores disponibles
     }],
   };
 
@@ -19,7 +34,11 @@ const BarChart = ({ counts, questionId }) => {
     plugins: {
       title: {
         display: true,
-        text: `Frecuencia de Respuestas para la Pregunta ${questionId}`,
+        text: `Diagrama de Barras de Frecuencia ${name}`,
+        font: {
+          size: 25,
+          color: '#ffffff',  // Color blanco para el título
+        },
       },
       legend: {
         display: false,
@@ -41,6 +60,7 @@ const BarChart = ({ counts, questionId }) => {
           display: true,
           text: 'Respuestas',
         },
+        
       },
       y: {
         title: {

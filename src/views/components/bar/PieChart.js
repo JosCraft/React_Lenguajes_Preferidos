@@ -27,9 +27,10 @@ const PieChart = ({ counts, questionId }) => {
     plugins: {
       title: {
         display: true,
-        text: `Distribución de Respuestas para la Pregunta ${questionId}`,
+        text: `Diagrama Circular`,
         font: {
-          size: 18,
+          size: 25,
+          color: '#ffffff',
         },
       },
       legend: {
@@ -51,40 +52,48 @@ const PieChart = ({ counts, questionId }) => {
         },
       },
       datalabels: {
-        color: '#fff',
+        color: '#000',  // Color del texto de los porcentajes
         formatter: (value, context) => {
           const percentage = ((value / total) * 100).toFixed(2);
           return `${percentage}%`;
         },
         display: true,
-        anchor: 'center',  // Centra los datos en el gráfico
-        align: 'center',  // Alinea los datos en el centro
+        anchor: 'end',  // Ancla los datos en el borde del gráfico
+        align: 'start',  // Alinea los datos al inicio
         font: {
-          size: 14,
+          size: 12,
           weight: 'bold',
         },
-        backgroundColor: '#000000',
+        backgroundColor: '#ffffff',
         borderRadius: 3,
         padding: 4,
+        borderColor: '#000',
+        borderWidth: 1,
       },
     },
-    // Efecto 3D
     elements: {
       arc: {
         borderWidth: 2,
         borderColor: '#fff',
         borderRadius: 10,
-        backgroundColor: '#007bff',
         shadowColor: 'rgba(0,0,0,0.3)',  // Color de la sombra
         shadowBlur: 10,  // Difuminado de la sombra
         shadowOffsetX: 4,  // Desplazamiento horizontal de la sombra
         shadowOffsetY: 4,  // Desplazamiento vertical de la sombra
       },
     },
+    layout: {
+      padding: {
+        top: 20,
+        bottom: 20,
+        left: 20,
+        right: 20,
+      },
+    },
   };
 
   return (
-    <div className="graph-container mt-5 text-center">
+    <div className="graph-container mt-5 text-center" style={{ maxWidth: '700px', margin: 'auto' }}>
       <Pie data={data} options={options} />
     </div>
   );

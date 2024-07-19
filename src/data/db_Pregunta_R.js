@@ -42,6 +42,7 @@ const db_Pregunta_R = [
       pregunta: '¿Cuántos años de experiencia tienes programando?',
       link: 6,
       resp: '0-1, 1-3, 3-5, 5-10',
+      items: '0,1,3,5,10',
       tipo: 'Cuantitativa',
       naturaleza: 'Continua',
     },

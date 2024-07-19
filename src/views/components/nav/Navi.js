@@ -22,6 +22,9 @@ const Navi = () => {
             </li>            
             <li className='nav-item'>
               <Link className='nav-link' to='/preguntas'><span>Preguntas</span></Link>
+            </li>  
+            <li className='nav-item'>
+              <Link className='nav-link' to='/dobleEntrada'><span>Doble Entrada</span></Link>
             </li>    
             <li className='nav-item'>
               <Link className='nav-link' to='/infoPage '><span>Informacion</span></Link>

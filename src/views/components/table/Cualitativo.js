@@ -1,15 +1,16 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-const CuantitativoDiscreto = ({ counts, frequencies, porcentual }) => {
+const Cualitativo = ({ counts, frequencies, porcentual }) => {
   return (
     <div className="table-responsive mt-4">
       <table className="table table-bordered table-hover">
         <thead>
           <tr>
             <th>Clase</th>
-            <th>Frecuencia</th>
-            <th>Frecuencia Porcentual</th>
+            <th>ni</th>
+            <th>fi</th>
+            <th>fi%</th>
           </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@ const CuantitativoDiscreto = ({ counts, frequencies, porcentual }) => {
             <tr key={index}>
               <td>{respuesta}</td>
               <td>{counts[respuesta]}</td>
+              <td>{frequencies[respuesta]}</td>
               <td>{porcentual[respuesta]}%</td>
             </tr>
           ))}
@@ -26,4 +28,4 @@ const CuantitativoDiscreto = ({ counts, frequencies, porcentual }) => {
   );
 };
 
-export default CuantitativoDiscreto;
+export default Cualitativo;

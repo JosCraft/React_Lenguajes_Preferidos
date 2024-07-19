@@ -6,24 +6,44 @@ const Miembros = () => {
   const members = [
     {
       imgSrc: img_1,
-      title: "Card title 1",
+      title: "Suxo Daza Victor Joel",
       text: ""
     },
     {
       imgSrc: img_1,
-      title: "Card title 2",
+      title: "Conde Sanchez Daniel Mirko",
       text: ""
     },
     {
       imgSrc: img_1,
-      title: "Card title 3",
+      title: "Espinal Alvarez Alan Leonardo",
       text: ""
     },
     {
       imgSrc: img_1,
-      title: "Card title 4",
+      title: "Aruquipa Ticona Samir Elias",
       text: ""
-    }
+    },
+    {
+      imgSrc: img_1,
+      title: "Gutierrez quispe Victor Andres",
+      text: ""
+    },
+    {
+      imgSrc: img_1,
+      title: "Lizarraga Zabala Edward Yamir",
+      text: ""
+    },
+    {
+      imgSrc: img_1,
+      title: "Luque Tarqui Marcelo",
+      text: ""
+    },
+    {
+      imgSrc: img_1,
+      title: "Mercado Tumiri Gerson",
+      text: ""
+    },
   ];
 
   return (
